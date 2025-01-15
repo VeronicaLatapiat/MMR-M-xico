@@ -15,7 +15,12 @@ Este script procesa datos de mortalidad materna entre los años 2002 y 2022. Su 
   - `ANIO_DEFUNCION`: Año de la defunción.
   - `ENTIDAD_RESIDENCIAD`: Entidad de residencia.
   - `CAUSA_CIE_4D`: Código CIE o ICD-10 asociado a la causa de defunción.
-
+- Sin embargo, para los analisis que deben realizar ustedes emplearan el archivo llamado `mortalidad_materna_2002_2022.csv` con las siguientes columnas:
+  - `ANIO_DEFUNCION`: Año de la defunción.
+  - `ENTIDAD_RESIDENCIAD`: Entidad de residencia.
+  - `ENTIDAD_OCURRENCIAD`: Entidad de ocurrencia.
+  - `CAUSA_CIE_4D`: Código CIE o ICD-10 asociado a la causa de defunción.
+  
 ## Estructura general paso a paso del script empleado:
 
 ### Paso 1: Leer el archivo de entrada
@@ -76,19 +81,27 @@ El script guarda un archivo CSV para cada año y un archivo consolidado con los 
 
 ## Ejecución del script
 
-1. Coloca el archivo `mortalidad_materna_2002_2022_resumen.csv` en el mismo directorio que el script.
-2. Ejecuta el script:
+1. Coloca el archivo `mortalidad_materna_2002_2022_resumen.csv` o `mortalidad_materna_2002_2022.csv` en el mismo directorio que el script.
+   También pueden ajustar el archivo de entrada para trabajar con la tabla de nacidos vivos.
+3. Ejecuta el script:
    ```bash
    python script_procesamiento_MM.py
    ```
-3. Los archivos generados se guardarán en el mismo directorio.
+4. Los archivos generados se guardarán en el mismo directorio.
 
 ## Resultado esperado
 
-El archivo consolidado `conteo_anual_por_estado.csv` tendrá la siguiente estructura:
+El archivo consolidado `conteo_anual_por_estado.csv` tendrá la siguiente estructura, este es valido para MM por residencia y por ocurrencia:
 
 | Estado       | CIE Código | 2002 | 2003 | ... | 2022 |
 |--------------|------------|------|------|-----|------|
 | Estado 1     | O00        | 12   | 10   | ... | 8    |
 | Estado 2     | O10        | 5    | 6    | ... | 7    |
+
+Y en el caso de nacidos vivos nos interesa una tabla del tipo: 
+
+| Estado       | 2002 | 2003 | ... | 2022 |
+|--------------|------|------|-----|------|
+| Estado 1     |  1   |  0   | ... |  8   |
+| Estado 2     |  5   |  6   | ... |  7   |
 
