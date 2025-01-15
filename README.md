@@ -16,7 +16,7 @@ Este script procesa datos de mortalidad materna entre los años 2002 y 2022. Su 
   - `ENTIDAD_RESIDENCIAD`: Entidad de residencia.
   - `CAUSA_CIE_4D`: Código CIE o ICD-10 asociado a la causa de defunción.
 
-## Instrucciones de uso
+## Estructura general paso a paso del script empleado:
 
 ### Paso 1: Leer el archivo de entrada
 El script carga los datos de `mortalidad_materna_2002_2022_resumen.csv` usando Pandas.
