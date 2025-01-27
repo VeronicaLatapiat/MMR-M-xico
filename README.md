@@ -2,7 +2,7 @@
 
 # README - Procesamiento de Mortalidad Materna
 
-Este script procesa datos de mortalidad materna entre los años 2002 y 2022. Su salida es un archivo donde la primera columna corresponde al estado, la segunda al código CIE o ICD-10, y las columnas restantes representan los conteos anuales.
+Este script procesa datos de mortalidad materna entre los años 2002 y 2022. La salida es un archivo donde la primera columna corresponde al estado, la segunda al código CIE o ICD-10, y las columnas restantes representan los conteos anuales.
 
 ## Requisitos
 
